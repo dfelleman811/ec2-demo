@@ -1,11 +1,15 @@
 package com.revature;
 
 import io.javalin.Javalin;
+import io.javalin.http.staticfiles.Location;
 
 public class HelloEC2 {
 
     public static void main(String[] args) {
-        Javalin app = Javalin.create().start();
+        Javalin app = Javalin.create(config -> {
+            config.addStaticFiles("/public", Location.CLASSPATH);
+                }
+        ).start();
 
         app.get("/hello", ctx -> {
             ctx.json("Hello from you EC2 instance!");
