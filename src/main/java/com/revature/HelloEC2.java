@@ -9,7 +9,7 @@ public class HelloEC2 {
         Javalin app = Javalin.create(config -> {
             config.addStaticFiles("/public", Location.CLASSPATH);
                 }
-        ).start();
+        ).start(8081);
 
         app.get("/hello", ctx -> {
             ctx.json("Hello from you EC2 instance!");
