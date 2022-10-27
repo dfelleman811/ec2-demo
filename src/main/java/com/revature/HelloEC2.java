@@ -12,7 +12,7 @@ public class HelloEC2 {
         ).start(8081);
 
         app.get("/hello", ctx -> {
-            ctx.json("Hello from you EC2 instance! Third try with '&'?");
+            ctx.json("Hello from you EC2 instance! Trying with nohup and &");
         });
     }
 }
