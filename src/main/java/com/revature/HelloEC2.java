@@ -12,7 +12,7 @@ public class HelloEC2 {
         ).start(8081);
 
         app.get("/hello", ctx -> {
-            ctx.json("Hello from you EC2 instance! If you're seeing this message our webhook worked!");
+            ctx.json("Hello from you EC2 instance! If you're seeing this message our webhook worked! Or at least the second time?");
         });
     }
 }
