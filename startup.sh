@@ -5,4 +5,4 @@ if [[ "" != "$PID" ]]; then
   sudo kill $PID
 fi
 echo "starting jar"
-sudo nohup java -jar ./target/HelloECTwo-1.0-SNAPSHOT-jar-with-dependencies.jar 1>logs.out 2>error.out &
+nohup java -jar ./target/HelloECTwo-1.0-SNAPSHOT-jar-with-dependencies.jar &
