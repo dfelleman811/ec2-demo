@@ -1,5 +1,7 @@
 #!/bin/bash
+whoami
 sudo su
+whoami
 PID=$(pgrep -f Hello | awk '{print $1}')
 if [[ "" != "$PID" ]]; then
   echo "killing $PID"
