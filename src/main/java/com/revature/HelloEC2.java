@@ -12,7 +12,7 @@ public class HelloEC2 {
         ).start(8081);
 
         app.get("/hello", ctx -> {
-            ctx.json("Hello from you EC2 instance! Gave Jenkins sudo persmission and added sudo su to startup script");
+            ctx.json("Hello from you EC2 instance! Gave Jenkins sudo persmission and added sudo - removed >nohup.out");
         });
     }
 }
