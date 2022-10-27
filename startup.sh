@@ -1,6 +1,6 @@
 #!/bin/bash
 PID=$(pgrep -f Hello | awk '{print $1}')
-if [ "" != "$PID" ]; then
+if [[ "" != "$PID" ]]; then
   echo "killing $PID"
   sudo kill $PID
 fi
