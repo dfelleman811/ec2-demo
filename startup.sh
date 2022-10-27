@@ -1,5 +1,5 @@
 #!/bin/bash
-PID=$( ps -ef | grep java | awk '{print $2}')
+PID=$( ps -ef | grep jar | awk '{print $2}')
 if [ "" != "$PID" ]; then
   echo "killing $PID"
   kill $PID
